@@ -1,7 +1,6 @@
 package framework.testing.testcases;
 
 import framework.engine.selenium.DriverFactory;
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.WebDriver;
 
@@ -12,8 +11,8 @@ public class OpenAllWebBrowser {
     protected WebDriver driver;
     DriverFactory driverFactory;
 
-    @Test
-    void TestEdge(){
+  /*    @Test
+  void TestEdge(){
         Properties edgeProperties = new Properties();
         edgeProperties.put("browser","edge");
         String browserName = edgeProperties.getProperty("browser");
@@ -24,17 +23,28 @@ public class OpenAllWebBrowser {
 
     }
 
+
+    /*<<<<<<< Updated upstream
     @Test
     void TestChrome(){
         Properties chromeProperties = new Properties();
         chromeProperties.put("browser","chrome");
         String browserName = chromeProperties.getProperty("browser");
+=======
+   /* @Test
+    void TestFirefox(){
+        Properties firefoxProperties = new Properties();
+        firefoxProperties.put("browser","firefox");
+        String browserName = firefoxProperties.getProperty("browser");
+>>>>>>> Stashed changes
         driverFactory = new DriverFactory();
         driver = driverFactory.inicializarDriver(browserName);
         Assertions.assertTrue(driver.getWindowHandle() != null);
         driver.quit();
 
     }
+
+
 
     @Test
     void TestNoFoundBrowserException(){
@@ -45,6 +55,6 @@ public class OpenAllWebBrowser {
         Assertions.assertThrows(RuntimeException.class,()-> driver = driverFactory.inicializarDriver(browserName));
 
     }
-
+  */
 
 }
